@@ -3,18 +3,32 @@ function roboticSpeakBack(userText){
 }
 
 function roboticTranslation(number){
-  var numberIsZero = ""
-  console.log(numberIsZero)
+  var roboticSentence = []
   if (number === 0) {
-    numberIsZero = "Beep!"
-    return numberIsZero;
-    console.log("The number is" + numberIsZero)
+    roboticSentence = "Beep!";
+    return roboticSentence;
+    console.log("The number is" + roboticSentence)
   }
-  return numberIsZero;
+  else if (number === 1) {
+    roboticSentence = "Boop!";
+    return roboticSentence;
+  }
+  else if ((number % 3) === 0) {
+    roboticSentence = "I’m sorry, Dave. I’m afraid I can’t do that.";
+    return roboticSentence;
+  }
+  else if (Number.isInteger(number)) {
+    console.log("Does not meet other rules" + number)
+    return number
+  }
+  else {
+    alert("Please enter a number")
+  }
+  return roboticSentence;
 
 }
 
-console.log(roboticTranslation(0));
+// console.log(roboticTranslation(0));
 
 
 $(function() {
