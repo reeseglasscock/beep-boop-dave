@@ -1,15 +1,3 @@
-function stringCreatorForNumbers(number){
-  var integerWholeNumber = Number(number)
-  var integerArray = []
-
-  for (number = 0; number <+ integerWholeNumber; number++){
-    integerArray.push(number)
-  }
-  console.log(number)
-  console.log(integerWholeNumber)
-  console.log(integerArray)
-}
-
 function roboticTranslation(number){
   var newArray = []
   var roboticDigits = number.split("")
@@ -35,12 +23,24 @@ function roboticTranslation(number){
   return newArray
 }
 
+function stringCreatorForNumbers(number){
+  var integerWholeNumber = Number(number)
+  var integerArray = []
+
+  for (number = 0; number <= integerWholeNumber; number++){
+    integerArray.push(roboticTranslation(number.toString()))
+  }
+  return integerArray
+  console.log("This is now the integer Array:" + integerArray)
+}
+
 
 $(function() {
   $("#robotTalkForm").submit(function(event){
     event.preventDefault();
     var userInput = $("#userInput").val();
     stringCreatorForNumbers(userInput)
-    $("span#outputToUser").text(roboticTranslation(userInput))
+    console.log(stringCreatorForNumbers(userInput))
+    $("span#outputToUser").text(stringCreatorForNumbers(userInput).join(" "))
   })
 })
