@@ -1,3 +1,15 @@
+function stringCreatorForNumbers(number){
+  var integerWholeNumber = Number(number)
+  var integerArray = []
+
+  for (number =0; number < integerWholeNumber; number++){
+    integerArray.push(number)
+  }
+  console.log(number)
+  console.log(integerWholeNumber)
+  console.log(integerArray)
+}
+
 function roboticTranslation(number){
   var newArray = []
   var roboticDigits = number.split("")
@@ -24,14 +36,11 @@ function roboticTranslation(number){
 }
 
 
-
 $(function() {
   $("#robotTalkForm").submit(function(event){
     event.preventDefault();
     var userInput = $("#userInput").val();
+    stringCreatorForNumbers(userInput)
     $("span#outputToUser").text(roboticTranslation(userInput))
-
-    // roboticTranslation(userInput)
   })
-
 })
