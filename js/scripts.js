@@ -1,22 +1,23 @@
-function roboticSpeakBack(userText){
-  $("span#outputToUser").text(userText)
-}
-
 function roboticTranslation(number){
-  var roboticSentence = []
-  if (number === 0) {
-    roboticSentence = "Beep!";
-    return roboticSentence;
-    console.log("The number is" + roboticSentence)
+  var roboticWords = ""
+  console.log(roboticWords)
+
+  if ((number % 3) === 0 && number != 0) {
+    roboticWords = "I’m sorry, Dave. I’m afraid I can’t do that.";
+    return roboticWords;
   }
+
   else if (number === 1) {
-    roboticSentence = "Boop!";
-    return roboticSentence;
+    roboticWords = "Boop!";
+    return roboticWords;
   }
-  else if ((number % 3) === 0) {
-    roboticSentence = "I’m sorry, Dave. I’m afraid I can’t do that.";
-    return roboticSentence;
+
+  else if (number === 0) {
+    roboticWords = "Beep!";
+    return roboticWords;
+    console.log("The number is" + roboticWords)
   }
+
   else if (Number.isInteger(number)) {
     console.log("Does not meet other rules" + number)
     return number
@@ -24,19 +25,17 @@ function roboticTranslation(number){
   else {
     alert("Please enter a number")
   }
-  return roboticSentence;
-
+  return roboticWords;
 }
 
 // console.log(roboticTranslation(0));
 
 
 $(function() {
-  var userText = ""
   $("#robotTalkForm").submit(function(event){
     event.preventDefault();
     var userInput = parseInt($("#userInput").val());
-    roboticSpeakBack(roboticTranslation(userInput));
+    $("span#outputToUser").text(roboticTranslation(userInput))
   })
 
 })
