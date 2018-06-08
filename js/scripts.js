@@ -15,7 +15,7 @@ function roboticTranslation(number){
       newArray.push("Beep!")
     }
     else {
-      newArray.push(number)
+      newArray.push(number + ".")
     }
   }
   return newArray
