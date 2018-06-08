@@ -1,35 +1,34 @@
 function roboticTranslation(number){
-
-  var roboticDigits = number.split("")
-
-  console.log("This is array of numbers" + roboticDigits)
-for (var digit = 0; digit < roboticDigits.length; digit++) {
   var newArray = []
+  var roboticDigits = number.split("")
+  console.log("This is roboticDigits:" + roboticDigits)
+  console.log(number)
+
+  // console.log("This is array of numbers" + roboticDigits)
+for (var digit = 0; digit < roboticDigits.length; digit++) {
+console.log("This is the index number of robotic digits" + roboticDigits[digit])
   // console.log("This is the digit" + digit)
-  if ((roboticDigits[digit] % 3) === 0 && roboticDigits[digit] != 0) {
-    console.log("This is digit" + roboticDigits[digit])
+  if (number % 3 == 0 && number != 0) {
+    console.log("This is number" + number)
     newArray.push("I’m sorry, Dave. I’m afraid I can’t do that.")
-    // console.log("This is the new Array in the push" + newArray)
-    // roboticDigits = "I’m sorry, Dave. I’m afraid I can’t do that.";
-  }
-  else if (roboticDigits[digit] === 1) {
-    console.log(roboticDigits[digit])
-    newArray.push("Boop!");
-    // return newArray;
+    break
   }
 
-return newArray
+  else if (roboticDigits[digit] == 1) {
+    newArray.push("Boop!");
+    break
+  }
+  else if (roboticDigits[digit] == 0) {
+    newArray.push("Beep!")
+    break
+  }
+
 }
-// console.log("newArray after looping:" + newArray)
 
 
 
   //
-  // else if (number === 0) {
-  //   roboticDigits = "Beep!";
-  //   return roboticDigits;
-  //   console.log("The number is" + roboticDigits)
-  // }
+
 
   // else if (Number.isInteger(number)) {
   //   console.log("Does not meet other rules" + number)
@@ -39,6 +38,7 @@ return newArray
   //   alert("Please enter a number")
   // }
   // return roboticDigits;
+  return newArray
 }
 
 // console.log(roboticTranslation(0));
