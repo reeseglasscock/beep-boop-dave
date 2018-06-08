@@ -1,75 +1,46 @@
-// function stringCreatorForNumbers(number){
-//
-//
-//
-//   console.log(number)
-//   console.log(integerWholeNumber)
-//   console.log(integerArray)
-// }
-
-// console.log(newArray)
-
-function roboticTranslation(number){
+function stringCreatorForNumbers(number){
   var integerWholeNumber = Number(number)
+  var integerArray = []
 
-  // console.log("Integer array is:" + integerArray);
-
-  var roboticDigits = number.split("")
-  // console.log(roboticDigits)
-// console.log(newArray)
-  for (numberSpot = 0; numberSpot <= integerWholeNumber; numberSpot++){
-      var integerArray = []
-      var newArray = []
-      // integerArray.concat(newArray)
-
-      console.log(numberSpot)
-
-    // for (digit = 0; digit < roboticDigits.length; digit++) {
-
-      // console.log(newArray)
-      if (numberSpot % 3 == 0 && numberSpot != 0) {
-        newArray.push("I’m sorry, Dave. I’m afraid I can’t do that.")
-        integerArray.concat(newArray)
-        console.log(integerArray);
-        // break
-      }
-      else if (numberSpot == 1) {
-        newArray.push("Boop!");
-        integerArray.concat(newArray)
-        // break
-      }
-      else if (numberSpot == 0) {
-        newArray.push("Beep!")
-        integerArray.concat(newArray)
-        // console.log("reached 0")
-        // console.log(roboticDigits[digit])
-        // break
-      }
-      else {
-        newArray.push(number)
-        // break
-      }
-
-
-
-// integerArray.slice(newArray)
-    // }
-    // integerArray.slice(newArray)
-    // return newArray
+  for (number = 0; number <+ integerWholeNumber; number++){
+    integerArray.push(number)
   }
-
-// console.log("This is integerArray" + integerArray)
-return newArray
-// console.log(newArray)
+  console.log(number)
+  console.log(integerWholeNumber)
+  console.log(integerArray)
 }
 
+function roboticTranslation(number){
+  var newArray = []
+  var roboticDigits = number.split("")
+
+  for (var digit = 0; digit < roboticDigits.length; digit++) {
+    if (number % 3 == 0 && number != 0) {
+      newArray.push("I’m sorry, Dave. I’m afraid I can’t do that.")
+      break
+    }
+    else if (roboticDigits[digit] == 1) {
+      newArray.push("Boop!");
+      break
+    }
+    else if (roboticDigits[digit] == 0) {
+      newArray.push("Beep!")
+      break
+    }
+    else {
+      newArray.push(number)
+      break
+    }
+  }
+  return newArray
+}
 
 
 $(function() {
   $("#robotTalkForm").submit(function(event){
     event.preventDefault();
     var userInput = $("#userInput").val();
-    // stringCreatorForNumbers(userInput)
+    stringCreatorForNumbers(userInput)
     $("span#outputToUser").text(roboticTranslation(userInput))
   })
 })
