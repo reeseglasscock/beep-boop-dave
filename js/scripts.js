@@ -31,7 +31,7 @@ function stringCreatorForNumbers(number){
   var integerWholeNumber = Number(number)
   var integerArray = []
   if (isNaN(number) == true || number=="") {
-    alert("Please enter a number")
+    $( "#robotTalkForm" ).effect( "shake", { direction: "right", times: 4, distance: 2}, 1000);
   }
   else if (isNaN(number) == false) {
     for (number = 0; number <= integerWholeNumber; number++){
