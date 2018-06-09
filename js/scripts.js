@@ -6,7 +6,7 @@ function roboticTranslation(number){
 
   for (var digit = 0; digit < roboticDigits.length; digit++) {
     if (number % 3 == 0 && number != 0) {
-      newArray.push("I’m sorry, Dave. I’m afraid I can’t do that.")
+      newArray.push("I'm sorry, Dave. I’m afraid I can’t do that.")
     }
     else if (roboticDigits[digit] == 1) {
       newArray.push("Boop!");
