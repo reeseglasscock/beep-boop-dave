@@ -5,6 +5,11 @@ h1 {
   color: white;
 }
 
+#userInput {
+  text-overflow: ellipsis;
+  width: 70%;
+}
+
 .mainContainerContent {
   padding: 20px;
 }

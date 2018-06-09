@@ -30,7 +30,7 @@ function roboticTranslation(number){
 function stringCreatorForNumbers(number){
   var integerWholeNumber = Number(number)
   var integerArray = []
-  if (isNaN(number) == true || number=="") {
+  if (isNaN(number) == true || number=="" || number > 1000) {
     $("#robotTalkForm")[0].reset()
     $("#robotTalkForm").effect("shake", { direction: "right", times: 2, distance: 2}, 300);
   }
