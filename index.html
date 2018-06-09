@@ -9,14 +9,20 @@
   <title>Broken Robot</title>
 </head>
 <body>
+
   <h1>Broken Robot Speak</h1>
-  <form id="robotTalkForm">
-    <label for="">Type a number for the robot</label>
-    <input type="text" name="" value="" id="userInput">
-    <button type="submit" name="button">Submit!</button>
-  </form>
-  <div class="" >
-    <p>The robot says: <span id="outputToUser"></span></p>
+  <div class="container mainContainerContent">
+    <div class="card robotInputCard">
+      <form id="robotTalkForm">
+        <label for="">Type a number for the robot:</label><br />
+        <input type="text" name="" value="" id="userInput" placeholder="Enter a number">
+        <button type="submit" name="button">Submit!</button>
+      </form>
+      <div class="robotResponse" >
+        <p>The robot says:</p>
+        <p id="outputToUser"></p>
+      </div>
+    </div>
   </div>
 </body>
 </html>

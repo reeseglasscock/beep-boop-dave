@@ -1,3 +1,18 @@
 h1 {
-  color: pink;
+  text-align: center;
+  padding: 20px 0;
+  background-color: black;
+  color: white;
+}
+
+.mainContainerContent {
+  padding: 20px;
+}
+
+.robotInputCard {
+  padding: 10px;
+}
+
+.robotResponse {
+  margin-top: 10px;
 }

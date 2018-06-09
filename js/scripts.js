@@ -36,6 +36,6 @@ $(function() {
     event.preventDefault();
     var userInput = $("#userInput").val();
     stringCreatorForNumbers(userInput)
-    $("span#outputToUser").text(stringCreatorForNumbers(userInput).join(" "))
+    $("#outputToUser").text(stringCreatorForNumbers(userInput).join(" "))
   })
 })
