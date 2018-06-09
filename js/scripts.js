@@ -32,7 +32,7 @@ function stringCreatorForNumbers(number){
   var integerArray = []
   if (isNaN(number) == true || number=="") {
     $("#robotTalkForm")[0].reset()
-    $( "#robotTalkForm" ).effect( "shake", { direction: "right", times: 4, distance: 2}, 1000);
+    $("#robotTalkForm").effect("shake", { direction: "right", times: 2, distance: 2}, 300);
   }
   else if (isNaN(number) == false) {
     for (number = 0; number <= integerWholeNumber; number++){
